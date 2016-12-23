@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset='utf-8' />
+    <%= wicked_pdf_stylesheet_link_tag 'pdf' %>
+  </head>
+  <body>
+    <h1 style="text-align: center">DAFTAR HARGA TAHU SUMEDANG PASANTREN</h1>
+
+    <table width='100%' cellpadding='0' cellspacing='0' border='1' align='center'>
+      <tr align="center">
+        <% for i in 1..5 %>
+          <td>No</td>
+          <td>Harga</td>
+        <% end %>
+      </tr>
+      <% for i in 1..20 %>
+        <tr align="center">
+          <% for ii in 1..5 %>
+            <% no = (ii == 1) ? i : ii * 20 + i - 20 %>
+            <td><%= no %></td>
+            <td><%= no * 700 %></td>
+          <% end %>
+        </tr>
+      <% end %>
+    </table>
+  </body>
+</html>
