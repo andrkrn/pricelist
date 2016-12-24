@@ -1,6 +1,10 @@
 class PagesController < ApplicationController
   def index
-    @unit_price = params[:unit_price].to_i || 700
+    if params[:unit_price].present? && params[:unit_price].to_i != 0
+      @unit_price = params[:unit_price].to_i
+    else
+      @unit_price = 700
+    end
 
     render pdf: 'index',
            orientation: 'Landscape',
