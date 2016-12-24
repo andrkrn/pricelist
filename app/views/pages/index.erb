@@ -19,7 +19,7 @@
           <% for ii in 1..5 %>
             <% no = (ii == 1) ? i : ii * 20 + i - 20 %>
             <td><%= no %></td>
-            <td><%= no * 700 %></td>
+            <td><%= no * @unit_price %></td>
           <% end %>
         </tr>
       <% end %>
