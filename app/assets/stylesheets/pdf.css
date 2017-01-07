@@ -4,12 +4,10 @@ html, body {
   font-family: 'Arial';
 }
 
-table {
-  th {
-    padding: 5px;
-  }
+table th {
+  padding: 5px;
+}
 
-  td {
-    padding: 3px 5px;
-  }
+table td {
+  padding: 3px 5px;
 }
